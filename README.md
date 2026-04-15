@@ -57,7 +57,7 @@ IDURAR is Open "Fair-Code" Source ERP / CRM (Invoice / Inventory / Accounting / 
 
 1.[Clone the repository](INSTALLATION-INSTRUCTIONS.md#step-1-clone-the-repository)
 
-2.[Create Your MongoDB Account and Database Cluster](INSTALLATION-INSTRUCTIONS.md#Step-2-Create-Your-MongoDB-Account-and-Database-Cluster)
+2.[Start MongoDB with Docker Compose](#start-mongodb-with-docker-compose)
 
 3.[Edit the Environment File](INSTALLATION-INSTRUCTIONS.md#Step-3-Edit-the-Environment-File)
 
@@ -97,3 +97,18 @@ Dont forget to give a ⭐️ to this project ... Happy coding!
 ## License
 
 IDURAR is Free Open Source Released under the GNU Affero General Public License v3.0.
+
+## Start MongoDB with Docker Compose
+
+Run the database locally:
+
+```bash
+docker compose up -d mongo
+```
+
+For a backend running on your host machine, set `backend/.env` to:
+
+```env
+DATABASE=mongodb://localhost:27017/erp-crm-db
+```
+
